@@ -1,8 +1,14 @@
 import { nanoid } from "nanoid";
+import "./App.scss";
 
 interface Experience {
   year: number;
   description: string;
+}
+
+interface Contacts {
+  tel: string;
+  mail: string;
 }
 
 interface CVData {
@@ -12,6 +18,7 @@ interface CVData {
   position: string;
   experience: Experience[];
   education: string[];
+  contacts: Contacts;
 }
 
 const cvData: CVData = {
@@ -21,30 +28,37 @@ const cvData: CVData = {
   position: "Junior Frontend Developer",
   experience: [{ year: 2023, description: "Content publisher" }],
   education: ["V LO w Katowicach"],
+  contacts: { tel: "530-456-919", mail: "magdalena.tyminska@mailmix.pl" },
 };
 
 function App() {
   return (
     <>
-      <main>
-        <header>
+      <main className="cv-main">
+        <header className="cv-header">
+          <small>{cvData.position}</small>
           <h1>
             {cvData.name} {cvData.lastName}
           </h1>
         </header>
-        <aside>
-          <h2>Personal data</h2>
+        <aside className="cv-personal">
           <img
+            className="cv-photo"
             src={cvData.photo}
             alt={`${cvData.name}${cvData.lastName} profile photo`}
           />
+          <h2>Contacts</h2>
           <p>
-            {cvData.name}
-            {cvData.lastName}
+            Phone: <a href="tel:+485304569191"> {cvData.contacts.tel}</a>
           </p>
-          <small>{cvData.position}</small>
+          <p>
+            Email:{" "}
+            <a href="mailto:magdalena.bonk@mailmix.pl">
+              {cvData.contacts.mail}
+            </a>
+          </p>
         </aside>
-        <section>
+        <section className="cv-details">
           <h2>Experience</h2>
           <ul>
             {cvData.experience.map((experience) => (
