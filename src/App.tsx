@@ -33,7 +33,7 @@ interface CVData {
 }
 
 const cvData: CVData = {
-  photo: "./assets/photo.jpg",
+  photo: "./src/assets/photo.jpg",
   name: "Magdalena",
   lastName: "Tymińska",
   position: "Junior Frontend Developer",
