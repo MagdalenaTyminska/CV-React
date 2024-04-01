@@ -38,7 +38,15 @@ const cvData: CVData = {
   lastName: "Tymińska",
   position: "Junior Frontend Developer",
   contacts: { c: "530-456-919", e: "magdalena.tyminska@mailmix.pl" },
-  techSkills: ["React", "JavaScript", "HTML", "CSS", "GIT", "VSC"],
+  techSkills: [
+    "React",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Jira",
+    "GIT",
+    "Visual Studio Code",
+  ],
   softSkills: [
     "Teamwork",
     "Time management",
@@ -129,10 +137,12 @@ function App() {
     <>
       <main className="cv-main">
         <header className="cv-header">
-          <h1>
-            {cvData.name} {cvData.lastName}
-          </h1>
-          <small>{cvData.position}</small>
+          <div className="header-1">
+            <h1>
+              {cvData.name} {cvData.lastName}
+            </h1>
+            <small>{cvData.position}</small>
+          </div>
           <img
             className="cv-photo"
             src={cvData.photo}
@@ -187,13 +197,13 @@ function App() {
           <>
             {" "}
             {cvData.summary.map((summary) => (
-              <p>{summary}</p>
+              <p className="sumText">{summary}</p>
             ))}
           </>
           <h2>Work Experience</h2>
           <ul>
             {cvData.experience.map((experience) => (
-              <li key={nanoid()}>
+              <li key={nanoid()} className="details-experience">
                 <strong>
                   {experience.year} - {experience.position}
                 </strong>

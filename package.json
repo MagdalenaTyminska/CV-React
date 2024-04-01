@@ -1,8 +1,9 @@
 {
-  "name": "vite-project",
+  "name": "cv-react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://magdalenatyminska.github.io/CV-React/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
