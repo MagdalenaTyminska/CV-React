@@ -1,5 +1,6 @@
 import { nanoid } from "nanoid";
 import "./App.scss";
+import photo from "./assets/photo.jpg";
 
 interface Contacts {
   c: string;
@@ -33,7 +34,7 @@ interface CVData {
 }
 
 const cvData: CVData = {
-  photo: "./src/assets/photo.jpg",
+  photo: photo,
   name: "Magdalena",
   lastName: "Tymińska",
   position: "Junior Frontend Developer",
