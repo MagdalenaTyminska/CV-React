@@ -5,7 +5,7 @@ $main-gap: 20px;
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-areas: "header header" "personal details ";
+  grid-template-areas: "header header" "personal details" "agree agree";
   grid-template-columns: 300px 1fr;
   height: 100vh;
 }
@@ -37,4 +37,9 @@ $main-gap: 20px;
   padding: $main-gap;
   text-align: center;
   background-color: #fafafa;
+}
+
+.cv-agree {
+  grid-area: agree;
+  height: auto;
 }
