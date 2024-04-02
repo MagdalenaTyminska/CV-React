@@ -1,0 +1,19 @@
+@import "../variables";
+
+.cv-main {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "header header" "personal details" "agree agree";
+  grid-template-columns: 320px 1fr;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+

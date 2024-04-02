@@ -1,0 +1,20 @@
+@import "../../variables";
+
+.cv-details {
+  grid-area: details;
+  padding: $main-gap;
+  text-align: left;
+  background-color: #fafafa;
+
+  .sumText {
+    text-align: justify;
+  }
+
+  .details-experience {
+    list-style-type: none;
+  }
+
+  ul {
+    margin-bottom: 25px;
+  }
+}
