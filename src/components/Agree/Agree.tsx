@@ -1,16 +1,12 @@
 import "./Agree.scss";
+import { CVAgree } from "../types";
 
-interface CVData {
-  agree: string;
-}
-
-const cvData: CVData = {
-  agree: `II agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act.
-  `,
+type Props = {
+  data: CVAgree;
 };
 
-const Agree = () => {
-  return <section className="cv-agree">{cvData.agree}</section>;
+const Agree = ({ data: { agree } }: Props) => {
+  return <section className="cv-agree">{agree}</section>;
 };
 
 export { Agree };

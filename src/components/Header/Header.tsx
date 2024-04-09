@@ -1,33 +1,23 @@
 import "./Header.scss";
-import photo from "../../assets/photo.jpg";
+import { CVHeader } from "../types";
 
-interface CVData {
-  photo: string;
-  name: string;
-  lastName: string;
-  position: string;
-}
-
-const cvData: CVData = {
-  photo: photo,
-  name: "Magdalena",
-  lastName: "Tymińska",
-  position: "Junior Frontend Developer",
+type Props = {
+  data: CVHeader;
 };
 
-const Header = () => {
+const Header = ({ data: { name, lastName, position, photo } }: Props) => {
   return (
     <header className="cv-header">
       <div className="header-1">
         <h1>
-          {cvData.name} {cvData.lastName}
+          {name} {lastName}
         </h1>
-        <small>{cvData.position}</small>
+        <small>{position}</small>
       </div>
       <img
         className="cv-photo"
-        src={cvData.photo}
-        alt={`${cvData.name}${cvData.lastName} profile photo`}
+        src={photo}
+        alt={`${name}${lastName} profile photo`}
       />
     </header>
   );
