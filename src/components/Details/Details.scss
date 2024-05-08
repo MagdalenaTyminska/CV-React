@@ -2,7 +2,7 @@
 
 .cv-details {
   grid-area: details;
-  padding: $main-gap;
+  padding: $mobile-gap;
   text-align: left;
   background-color: #fafafa;
 
@@ -16,5 +16,11 @@
 
   ul {
     margin-bottom: 25px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cv-details {
+    padding: $main-gap;
   }
 }

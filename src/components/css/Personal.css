@@ -1,8 +1,6 @@
-@import "../../variables";
-
 .cv-personal {
   grid-area: personal;
-  padding: $mobile-gap;
+  padding: 1rem 4rem;
   background-color: #cfe8fd;
   text-align: left;
   height: auto;
@@ -10,6 +8,6 @@
 
 @media screen and (min-width: 768px) {
   .cv-personal {
-    padding: $main-gap;
+    padding: 25px;
   }
-}
+}/*# sourceMappingURL=Personal.css.map */

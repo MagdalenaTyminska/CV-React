@@ -2,14 +2,14 @@
 
 .cv-header {
   grid-area: header;
-  padding: $main-gap;
+  padding: $mobile-gap;
   text-align: center;
   height: auto;
   background-color: #85b3d1;
   color: white;
   display: grid;
-  grid-template-areas: "header-1 header-2";
-  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "header-1" "header-2";
+  grid-template-columns: 1fr;
   font-size: 24px;
 
   .header-1 {
@@ -23,10 +23,32 @@
   .cv-photo {
     grid-area: header-1;
     width: 100%;
+    height: auto;
     max-width: 280px;
     margin-top: $main-gap;
     margin-bottom: $main-gap;
     border-radius: 50%;
     align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cv-header {
+    grid-template-areas: "header-1 header-2";
+    grid-template-columns: 1fr 2fr;
+    font-size: 22px;
+    padding: $main-gap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cv-header {
+    font-size: 24px;
+
+    .cv-photo {
+      margin: 0;
+    }
   }
 }

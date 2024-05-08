@@ -1,16 +1,14 @@
-@import "../../variables";
-
 .cv-agree {
   grid-area: agree;
   height: auto;
   background-color: #cfe8fd;
   text-align: left;
-  padding: $mobile-gap;
+  padding: 1rem 4rem;
 }
 
 @media screen and (min-width: 768px) {
   .cv-agree {
-    padding: $main-gap;
+    padding: 25px;
     background-color: #fafafa;
   }
-}
+}/*# sourceMappingURL=Agree.css.map */
